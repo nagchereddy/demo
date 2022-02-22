@@ -1,0 +1,9 @@
+---
+  - hosts: all
+    become: true
+    tasks:
+      - name: copying war file to the app server
+        copy:
+          src: ./demo.war
+          dest: /root/apache-tomcat-9.0.58/webapps/
+
